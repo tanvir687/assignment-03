@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rinterio Website</title>
+    <!-- google fonts CDN  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome CDN  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- tailwind and daisyUi CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tailwind script tag  -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              "dark-light-green": "text-green-400",
+              "light-green": "text-green-300",
+              "light-white": "rgba(255, 255, 255, 1.00)",
+              "icon-white": "rgba(233, 233, 233)",
+              "work-card-01": "#fbcfe8",
+              "work-card-02": "#fef08a",
+              "work-card-03": "#a4dac3",
+              "work-card-04": "#93c5fd",
+            },
+            fontFamily: {
+              manrope: "manrope",
+            },
+            backgroundImage: {
+              "contact-img": "url('./assets/bg.jpg')",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-manrope bg-light-white">
+    <!-- header section  -->
+    <header class="md:max-w-screen-xl mx-auto md:px-10 lg:px-20 bg-light-white">
+      <!-- navbar section  -->
+      <nav class="mx-5 mt-10">
+        <div class="navbar bg-base-100 justify-between">
+          <!-- logo content  -->
+          <div>
+            <i
+              class="fa-solid fa-arrow-right-long rounded-full p-[5px] lg:mr-1 bg-lime-300 -rotate-45"
+            ></i>
+            <a class="text-xl font-extrabold">Rinterio</a>
+          </div>
+          <!-- link content  -->
+          <div>
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost md:hidden lg:hidden">
+                <i class="fa-solid fa-bars"></i>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              >
+                <li class="font-bold text-gray-800"><a>Home</a></li>
+                <li class="font-medium text-gray-400"><a>Portfolio</a></li>
+                <li class="font-medium text-gray-400"><a>Service</a></li>
+                <li class="font-medium text-gray-400"><a>Blog</a></li>
+                <li class="font-medium text-gray-400"><a>Contact Us</a></li>
+              </ul>
+            </div>
+
+            <div class="hidden lg:flex">
+              <ul class="menu menu-horizontal px-1 navbar-center">
+                <li class="font-bold text-gray-800"><a>Home</a></li>
+                <li class="font- text-gray-400"><a>Service</a></li>
+                <li class="font- text-gray-400"><a>Portfolio</a></li>
+                <li class="font- text-gray-400"><a>Blog</a></li>
+                <li class="font- text-gray-400"><a>Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- icon and button content  -->
+          <div class="hidden md:block lg:block">
+            <div class="flex items-center space-x-2">
+              <!-- search icon  -->
+              <button class="indicator bg-icon-white rounded-full p-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
+                </svg>
+              </button>
+              <!-- shope icon  -->
+              <div class="indicator bg-icon-white rounded-full p-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                  />
+                </svg>
+              </div>
+              <!-- button content  -->
+              <div class="space-x-8 space-y-3">
+                <button
+                  class="btn bg-lime-400 rounded-full font-extrabold text-base"
+                >
+                  Book Consult
+                  <i
+                    class="fa-solid fa-arrow-right-long rounded-full p-[5px] lg:mr-1 text-white bg-black -rotate-45"
+                  ></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- banner section  -->
+      <section class="md:max-w-screen-xl mx-auto md:px-16 lg:px-20">
+        <!-- banner container -->
+        <div class="mb-20">
+          <div class="hero">
+            <div class="hero-content text-center p-5">
+              <div class="mx-auto">
+                <!-- image content  -->
+                <div class="py-6">
+                  <img
+                    class="w-7/12 mx-auto lg:mx-auto"
+                    src="./assets/banner.png"
+                    alt=""
+                  />
+                </div>
+                <!-- text content  -->
+                <h1 class="text-4xl md:text-6xl font-black text-black">
+                  A barn house of this design has a striking appearance
+                </h1>
+                <p class="py-8 font-medium text-base w-7/8 lg:w-3/4 mx-auto">
+                  The barn house captivates with its blend of rustic charm and
+                  modern sophistication, featuring weathered wood, sleek metal
+                  accents, and large windows that flood the space with natural
+                  light.
+                </p>
+                <div class="space-y-3">
+                  <button
+                    class="btn md:ml-4 bg-lime-200 rounded-full w-full md:w-48 font-extrabold text-base"
+                  >
+                    View Details
+                    <i
+                      class="fa-solid fa-arrow-right-long rounded-full p-[5px] lg:mr-1 bg-lime-400 -rotate-45"
+                    ></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+    <!-- main section  -->
+    <main>
+      <!--about design section  -->
+      <section class="pb-20 bg-gray-100">
+        <img
+          class="ml-14 pt-10 hidden lg:block"
+          src="./assets/Vector.png"
+          alt=""
+        />
+        <div class="md:max-w-screen-xl mx-auto md:px-16 lg:px-20">
+          <div class="hero w-full">
+            <div class="hero-content flex-col-reverse lg:flex-row-reverse p-5">
+              <!-- image content  -->
+              <div class="">
+                <img
+                  src="./assets/Rectangle.png"
+                  class="rounded-lg lg:pl-3 lg:h-full 
+                  object-cover h-64 w-96 lg:w-full"
+                />
+              </div>
+              <!-- text-content  -->
+              <div
+                class="space-y-7 md:w-11/12 lg:w-2/4 lg:pr-3 text-center md:text-start mt-5"
+              >
+                <button
+                  class="bg-white px-4 py-2 font-bold text-base rounded-full"
+                >
+                  <i class="fa-solid fa-arrow-right-long"></i> About Us
+                </button>
+                <h1
+                  class="text-3xl md:text-4xl font-extrabold md:font-black text-black"
+                >
+                  We design thoughtful, liveable spaces
+                </h1>
+                <p class="text-base font-medium md:text-gray-800 text-gray-600">
+                  Featuring sleek metal elements and weathered wood, the barn
+                  house captivates with its unique blend of modern
+                  sophistication and rustic charm.
+                </p>
+                <!-- cart content  -->
+                <div class="space-y-4 text-start">
+                  <!-- cart 01 -->
+                  <div class="bg-white p-5 rounded-xl flex gap-6">
+                    <!-- image-content  -->
+                    <div>
+                      <img src="./assets/commercial.png" alt="" />
+                    </div>
+                    <!-- text-content  -->
+                    <div class="space-y-2">
+                      <h3
+                        class="font-extrabold text-lg md:text-gray-900 text-gray-700"
+                      >
+                        Commercial
+                      </h3>
+                      <p
+                        class="font-semibold md:font-medium md:text-sm text-base md:text-gray-600 text-gray-500 lg:w-3/4"
+                      >
+                        The barn house's intriguing mix of temporary design and
+                        appeal captivates.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- cart 02 -->
+                  <div class="bg-white p-5 rounded-xl flex gap-6">
+                    <!-- image-content  -->
+                    <div>
+                      <img src="./assets/residential.png" alt="" />
+                    </div>
+                    <!-- text-content  -->
+                    <div class="space-y-2">
+                      <h3
+                        class="font-extrabold text-lg md:text-gray-900 text-gray-700"
+                      >
+                        Residential
+                      </h3>
+                      <p
+                        class="font-semibold md:font-medium md:text-sm text-base md:text-gray-600 text-gray-500 lg:w-3/4"
+                      >
+                        With its intriguing mix of modern and rustic components,
+                        the barn house captivates.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- work process section  -->
+      <section class="pb-20 bg-gray-100">
+        <div class="md:max-w-screen-xl mx-auto md:px-16 lg:px-20">
+          <!-- text content  -->
+          <div class="text-center space-y-4 p-5">
+            <button class="bg-white px-4 py-2 font-bold text-base rounded-full">
+              <i class="fa-solid fa-arrow-right-long"></i> How we works
+            </button>
+            <h1 class="font-extrabold text-3xl lg:text-4xl text-black">
+              Our Works Process
+            </h1>
+            <p
+              class="lg:font-medium font-semibold text-sm text-gray-600 lg:w-[55%] mx-auto"
+            >
+              our methodical approach to project development, ensuring
+              transparency, quality, and client satisfaction at every stage.
+            </p>
+          </div>
+          <!-- cart container  -->
+          <div
+            class="lg:mt-8 lg:flex flex-row space-x-5 lg:space-y-0 space-y-6"
+          >
+            <!-- cart 01 -->
+            <div class="bg-work-card-01 lg:w-1/4 rounded-2xl w-11/12 mx-auto">
+              <figure class="px-6 pt-6 items-start text-start">
+                <img
+                  src="./assets/concept.png"
+                  alt="Shoes"
+                  class="rounded-xl"
+                />
+              </figure>
+              <div class="card-body p-6">
+                <h2 class="font-extrabold text-xl text-gray-900">Concept</h2>
+                <p>
+                  Distills our creative vision, turning innovative ideas into
+                  project blueprints.
+                </p>
+              </div>
+            </div>
+            <!-- cart 02 -->
+            <div class="bg-work-card-02 lg:w-1/4 rounded-2xl w-11/12 mx-auto">
+              <figure class="px-6 pt-6 items-start text-start">
+                <img
+                  src="./assets/flow-chart.png"
+                  alt="Shoes"
+                  class="rounded-xl"
+                />
+              </figure>
+              <div class="card-body p-6">
+                <h2 class="font-extrabold text-xl text-gray-900">
+                  Design Process
+                </h2>
+                <p>
+                  Our creative journey, transforming ideas into visually
+                  functional designs.
+                </p>
+              </div>
+            </div>
+            <!-- cart 03 -->
+            <div class="bg-work-card-03 lg:w-1/4 rounded-2xl w-11/12 mx-auto">
+              <figure class="px-6 pt-6 items-start text-start">
+                <img src="./assets/vision.png" alt="Shoes" class="rounded-xl" />
+              </figure>
+              <div class="card-body p-6">
+                <h2 class="font-extrabold text-xl text-gray-900">
+                  Supervision
+                </h2>
+                <p>
+                  Projects stay on track, with expert oversight guiding to
+                  successful completion.
+                </p>
+              </div>
+            </div>
+            <!-- cart 04 -->
+            <div class="bg-work-card-04 lg:w-1/4 rounded-2xl w-11/12 mx-auto">
+              <figure class="px-6 pt-6 items-start text-start">
+                <img
+                  src="./assets/budget-planning.png"
+                  alt="Shoes"
+                  class="rounded-xl"
+                />
+              </figure>
+              <div class="card-body p-6">
+                <h2 class="font-extrabold text-xl text-gray-900">
+                  Budget Planning
+                </h2>
+                <p>
+                  Approach to creating cost-effective strategies and financial
+                  goals.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- our portfolio section  -->
+      <section class="bg-gray-100 md:bg-white md:max-w-screen-xl mx-auto">
+        <!-- text content  -->
+        <div class="text-center space-y-4 p-5 bt-20 pt-10 lg:pt-20">
+          <button
+            class="bg-lime-100 px-4 py-2 font-bold text-base rounded-full"
+          >
+            <i class="fa-solid fa-arrow-right-long"></i> Explore our Latest
+            works
+          </button>
+          <h1 class="font-extrabold text-3xl lg:text-4xl text-black">
+            Our Latest Portfolio
+          </h1>
+          <p
+            class="lg:font-medium font-semibold text-sm text-gray-600 lg:w-[55%] px-5 lg:px-0 mx-auto"
+          >
+            Our most recent and impactful projects, technical expertise, and
+            commitment to excellence. Each portfolio entry demonstrates how we
+            bring client visions to life.
+          </p>
+        </div>
+        <!-- layout content  -->
+        <div
+          class="md:max-w-screen-xl mx-auto md:px-6 lg:px-20 mt-6 p-5 mb-1 md:mb-10 lg:mb-20"
+        >
+          <!-- cards content-->
+          <div class="grid md:grid-cols-12 grid-cols-1 gap-5">
+            <!-- card 01 -->
+            <div
+              class="bg-white border border-gray-300 shadow-sm 
+              col-span-4 order-1 md:order-1 lg:order-none lg:col-span-8 
+              md:col-span-12 lg:p-4 p-5 rounded-2xl md:flex space-x-5"
+            >
+              <img
+                class="object-contain w-full lg:w-72 mb-3 lg:mb-0 mr-5"
+                src="./assets/img1.png"
+                alt=""
+              />
+              <!-- text content  -->
+              <div class="lg:space-y-5 space-y-5 !ml-0 md:pt-4 lg:pt-2">
+                <h2 class="text-xl font-extrabold text-gray-800">Commercial</h2>
+                <p
+                  class="lg:text-sm text-base lg:font-medium font-semibold text-gray-600 lg:leading-6"
+                >
+                  The barn house captivates with its blend of rustic charm and
+                  modern. The barn house captivates with its blend of rustic
+                  charm and modern .
+                </p>
+                <button class="rounded-full font-extrabold text-lg">
+                  View Details
+                  <i
+                    class="fa-solid fa-arrow-right-long rounded-full p-[5px] lg:mr-1 bg-lime-400 -rotate-45"
+                  ></i>
+                </button>
+              </div>
+            </div>
+            <!-- card 02 -->
+            <div
+              class="bg-white border border-gray-300 shadow-sm lg:col-span-4 
+              col-span-4 md:col-span-6 order-2 md:order-2 lg:order-none
+               p-4 rounded-2xl"
+            >
+              <img
+                class="object-contain lg:w-full w-full"
+                src="./assets/img2.png"
+                alt=""
+              />
+            </div>
+            <!-- cart 3 -->
+            <div
+              class="bg-white border border-gray-300 shadow-sm lg:col-span-3 
+              col-span-4 md:col-span-6 p-4 rounded-2xl lg:h-52 md:order-5 
+              lg:order-none md:h-52 order-5"
+            >
+              <img
+                class="object-fill lg:h-full md:h-full lg:w-96 w-full h-60"
+                src="./assets/img3.png"
+                alt=""
+              />
+            </div>
+            <!-- cart 4 -->
+            <div
+              class="bg-white border border-gray-300 shadow-sm col-span-4 
+              md:col-span-12 lg:col-span-6 p-4 rounded-xl md:flex space-x-4 
+              lg:h-52 order-4 md:order-4 lg:order-none"
+            >
+              <img
+                class="object-contain lg:w-5/6 w-full mb-3 md:mb-0 lg:mb-0 lg:mr-4 md:w-2/4"
+                src="./assets/img4.png"
+                alt=""
+              />
+              <!-- text content  -->
+              <div class="lg:space-y-5 space-y-5 !ml-0 md:p-7 lg:p-0 lg:mt-1">
+                <h2 class="text-xl font-extrabold text-gray-800">
+                  Residential
+                </h2>
+                <p
+                  class="lg:text-sm text-base lg:font-medium font-semibold text-gray-600 lg:leading-6"
+                >
+                  With its intriguing mix of modern and rustic elements, the
+                  barn house captivates.
+                </p>
+                <button class="rounded-full font-extrabold text-lg">
+                  See Details
+                  <i
+                    class="fa-solid fa-arrow-right-long rounded-full p-[5px] lg:mr-1 bg-lime-400 -rotate-45"
+                  ></i>
+                </button>
+              </div>
+            </div>
+            <!-- cart 5 -->
+            <div
+              class="bg-white border border-gray-300 shadow-sm lg:col-span-3 
+              md:col-span-6 col-span-4 p-4 rounded-2xl lg:h-52 md:order-3 
+              order-3 lg:order-none"
+            >
+              <img
+                class="object-fill lg:h-full md:h-44 lg:w-96 w-full"
+                src="./assets/img5.png"
+                alt=""
+              />
+            </div>
+            <!-- cart 5 medium screen show -->
+            <div
+              class="hidden md:block lg:hidden bg-white border border-gray-300 
+              shadow-sm lg:col-span-3 md:col-span-6 col-span-4 p-4 rounded-2xl 
+              order-first lg:order-none md:order-6"
+            >
+              <img
+                class="object-fill lg:h-full md:h-44 lg:w-96 w-full"
+                src="./assets/img5.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- our teem section  -->
+      <section class="pb-20 md:max-w-screen-xl mx-auto md:px-10 lg:px-20">
+        <!-- text content  -->
+        <div class="text-center space-y-4 p-5 bt-20 pt-10 lg:pt-20">
+          <button
+            class="bg-lime-100 px-4 py-2 font-bold text-base rounded-full"
+          >
+            <i class="fa-solid fa-arrow-right-long"></i> Our teams
+          </button>
+          <h1 class="font-extrabold text-3xl lg:text-4xl text-black">
+            Our Dedicated Team
+          </h1>
+          <p
+            class="lg:font-medium font-semibold text-sm text-gray-600 lg:w-[55%] px-5 lg:px-0 mx-auto"
+          >
+            Our dedicated team of experienced professionals brings passion,
+            expertise, and a commitment to excellence to every project. With a
+            strong focus on quality, and client satisfaction.
+          </p>
+        </div>
+        <!-- gallery content  -->
+        <div
+          class="pt-5 p-5 md:p-0 lg:p-0 text-gray-700 grid grid-cols-1 
+          md:grid-cols-2 lg:grid-cols-3 md:gap-2 mx-auto justify-between"
+        >
+          <!-- card 01 -->
+          <div class="mt-32 mx-auto">
+            <div class="bg-yellow-300 w-80 relative">
+              <div class="avatar absolute -top-28 left-16">
+                <div class="w-52">
+                  <img
+                    class="bg-gray-800 p-2 rounded-full"
+                    src="./teem/member-02.jpg"
+                  />
+                </div>
+              </div>
+              <div class="card-body pt-32">
+                <h2 class="card-title mx-auto">Tommy Atkins</h2>
+                <p class="text-center">
+                  Tommy Atkins is a junior construction engineer known for his
+                  enthusiasm and strong problem-solving skills. With a solid
+                  foundation in engineering principles, he supports project
+                  teams by ensuring tasks are completed accurately, to
+                  successful project.
+                </p>
+                <!-- icons content  -->
+                <div class="mx-auto space-x-6 mt-5">
+                  <i class="fa-brands fa-facebook"></i>
+                  <i class="fa-brands fa-square-instagram"></i>
+                  <i class="fa-brands fa-square-twitter"></i>
+                  <i class="fa-brands fa-linkedin"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- card 02 -->
+          <div class="mt-32 mx-auto">
+            <div class="bg-yellow-300 w-80 relative">
+              <div class="avatar absolute -top-28 left-16">
+                <div class="w-52">
+                  <img
+                    class="bg-gray-800 p-2 rounded-full"
+                    src="./teem/member-03.jpg"
+                  />
+                </div>
+              </div>
+              <div class="card-body pt-32">
+                <h2 class="card-title mx-auto">Tommy Atkins</h2>
+                <p class="text-center">
+                  Tommy Atkins is a junior construction engineer known for his
+                  enthusiasm and strong problem-solving skills. With a solid
+                  foundation in engineering principles, he supports project
+                  teams by ensuring tasks are completed accurately, to
+                  successful project.
+                </p>
+                <!-- icons content  -->
+                <div class="mx-auto space-x-6 mt-5">
+                  <i class="fa-brands fa-facebook"></i>
+                  <i class="fa-brands fa-square-instagram"></i>
+                  <i class="fa-brands fa-square-twitter"></i>
+                  <i class="fa-brands fa-linkedin"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- card 03 -->
+          <div class="mt-32 mx-auto">
+            <div class="bg-yellow-300 w-80 relative">
+              <div class="avatar absolute -top-28 left-16">
+                <div class="w-52">
+                  <img
+                    class="bg-gray-800 p-2 rounded-full"
+                    src="./teem/member-01.webp"
+                  />
+                </div>
+              </div>
+              <div class="card-body pt-32">
+                <h2 class="card-title mx-auto">John Halpern</h2>
+                <p class="text-center">
+                  John Halpern is a senior construction engineer with over 25
+                  years of experience. Known for his expertise in complex
+                  projects and leadership skills, he ensures that every aspect
+                  of construction is executed with highly precision, safety, and
+                  a commitment to excellence.
+                </p>
+                <!-- icons content  -->
+                <div class="mx-auto space-x-6 mt-5">
+                  <i class="fa-brands fa-facebook"></i>
+                  <i class="fa-brands fa-square-instagram"></i>
+                  <i class="fa-brands fa-square-twitter"></i>
+                  <i class="fa-brands fa-linkedin"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contact section  -->
+      <section class="pb-24 mt-1 bg-contact-img">
+        <div class="p-5 lg:p-0">
+          <!-- text content  -->
+          <div class="text-center space-y-4 p-5 pt-24">
+            <button
+              class="bg-lime-100 px-4 py-2 font-bold text-base rounded-full"
+            >
+              <i class="fa-solid fa-arrow-right-long"></i> Let’s Connect
+            </button>
+            <h1 class="font-extrabold text-3xl lg:text-4xl text-black">
+              Let’s Discuss Next Project
+            </h1>
+            <p
+              class="lg:font-medium font-semibold text-sm text-gray-600 lg:w-[55%] mx-auto"
+            >
+              Invites potential clients to connect with us for a personalized
+              consultation. We’re eager to explore your ideas, and solution that
+              meets your specific goals and vision.
+            </p>
+          </div>
+          <!-- form content  -->
+          <div
+            class="grid lg:grid-cols-2 gap-5 md:max-w-screen-xl mx-auto md:px-10 lg:px-48 mt-5 p-5 lg:p-0"
+          >
+            <input
+              class="p-4 rounded-full"
+              type="text"
+              placeholder="First Name*"
+            />
+            <input
+              class="p-4 rounded-full"
+              type="text"
+              placeholder="Last Name*"
+            />
+            <input
+              class="p-4 rounded-full"
+              type="text"
+              placeholder="Phone Number*"
+            />
+            <input
+              class="p-4 rounded-full"
+              type="text"
+              placeholder="Email Number*"
+            />
+          </div>
+          <div
+            class="grid lg:grid-cols-1 md:max-w-screen-xl mx-auto md:px-10 lg:px-48 lg:mt-5 p-5 md:p-0 lg:p-0"
+          >
+            <textarea
+              class="p-4 rounded-3xl"
+              placeholder="Write your message here w-full"
+              cols="30"
+              rows="12"
+            ></textarea>
+          </div>
+          <!-- button content  -->
+          <div class="text-center md:px-10 lg:px-48 mt-5 p-5 lg:p-0">
+            <button
+              class="btn bg-lime-400 rounded-full font-extrabold text-base w-full"
+            >
+              Send Mail
+              <i
+                class="fa-solid fa-arrow-right-long rounded-full p-[5px] lg:mr-1 text-white bg-black -rotate-45"
+              ></i>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- footer section -->
+    <footer class="bg-black mt-1 mb-1 p-5 lg:p-0">
+      <div class="text-center space-y-8 py-16 lg:py-20">
+        <!-- text content  -->
+        <div class="space-y-6">
+          <i
+            class="fa-solid fa-arrow-right-long rounded-full p-[5px] lg:mr-1 bg-lime-300 -rotate-45"
+          ></i>
+          <a class="text-xl font-extrabold text-white">Rinterio</a>
+          <p
+            class="font-medium text-base text-gray-400 leading-6 lg:w-2/4 mx-auto"
+          >
+            provides essential information including contact details, social
+            media links, and quick access to key pages like Services and About
+            Us. It also ensure a comprehensive and accessible user experience.
+          </p>
+        </div>
+        <!-- links content  -->
+        <div
+          class="flex flex-col md:flex-row lg:flex-row text-gray-200 justify-center items-center text-base space-y-5 md:space-x-24 lg:space-x-28"
+        >
+          <ul>
+            <li><a class="" href="#">Home</a></li>
+          </ul>
+          <ul>
+            <li><a class="" href="#">Services</a></li>
+          </ul>
+          <ul>
+            <li><a class="" href="#">Portfolio</a></li>
+          </ul>
+          <ul>
+            <li><a class="" href="#">Blogs</a></li>
+          </ul>
+          <ul>
+            <li><a class="" href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <!-- button content  -->
+        <div class="text-center md:px-10 lg:px-48 lg:p-0">
+          <button class="btn bg-lime-400 rounded-full font-extrabold text-base">
+            Book Consult
+            <i
+              class="fa-solid fa-arrow-right-long rounded-full p-[5px] lg:mr-1 text-white bg-black -rotate-45"
+            ></i>
+          </button>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
